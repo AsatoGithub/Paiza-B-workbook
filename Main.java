@@ -6,9 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        for(int i = a;i<=b;i++){
-          System.out.println(i);
+        sc.nextLine();
+        String line = sc.nextLine();
+        System.out.println(line.substring(0,a - 1) + line.substring(a - 1, b).toUpperCase() + line.substring(b));
         }
-
     }
-}
