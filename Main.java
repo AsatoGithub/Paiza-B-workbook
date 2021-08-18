@@ -4,8 +4,10 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String line = sc.nextLine();
-        if(line.charAt(0)<=line.charAt(line.length()-1)){
+        char X = sc.next().charAt(0);
+        char Y = sc.next().charAt(0);
+        char C = sc.next().charAt(0);
+        if(X<=C && C<=Y){
             System.out.println("true");
         }else{
             System.out.println("false");
