@@ -4,21 +4,28 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s1 = sc.nextLine();
-        String s2 = sc.nextLine();
-        String s3 = sc.nextLine();
-        String s4 = sc.nextLine();
-        String s5 = sc.nextLine();
-        String O = "OOOOO";
-        String X = "XXXXX";
+        int count = 0;
+        ArrayList<String> Array = new ArrayList<String>();
+        while(sc.hasNextLine()){
+            String string = sc.nextLine();
+            Array.add(string);
+        }
+        String[] S = new String[Array.size()];
+        for(int i = 0; i<S.length; i++){
+            S[i] = String.valueOf(Array.get(0).charAt(i))+String.valueOf(Array.get(1).charAt(i)+String.valueOf(Array.get(2).charAt(i))+String.valueOf(Array.get(3).charAt(i))+String.valueOf(Array.get(4).charAt(i)));
 
-        if(s1.equals(O) || s2.equals(O) || s3.equals(O) || s4.equals(O) || s5.equals(O)){
-            System.out.println("O");
-        }else if(s1.equals(X) || s2.equals(X) || s3.equals(X) || s4.equals(X) || s5.equals(X)){
-            System.out.println("X");
-        }else{
+        }
+        for(int n = 0; n<S.length; n++){
+            if(S[n].equals("OOOOO")){
+                System.out.println("O");
+                count = count + 1;
+            }else if(S[n].equals("XXXXX")){
+                System.out.println("X");
+                count = count + 1;
+            }
+        }
+        if(count == 0){
             System.out.println("D");
         }
-
     }
 }
