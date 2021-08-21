@@ -1,12 +1,15 @@
 import java.util.*;
+import java.util.HashMap;
+
 public class Main {
   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
     LinkedHashMap<String, String> hs = new LinkedHashMap<String, String>();
-    hs.put("Kyoko", "B");
-    hs.put("Rio", "O");
-    hs.put("Tsubame", "AB");
-    hs.put("KurodaSensei", "A");
-    hs.put("NekoSensei", "A");
+    int n = sc.nextInt();
+    for(int i = 0; i<n; i++){
+        hs.put(sc.next(),sc.next());
+    }
+
     for (String S : hs.keySet()) {
       System.out.println(S + " " + hs.get(S));
     }
